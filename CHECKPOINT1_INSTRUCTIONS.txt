@@ -1,7 +1,0 @@
-Checkpoint 1 Prompts
-As a group, answer the following prompts: 
-
-Which of the three datasets did you choose? Why? (2 points) 
-Upload a screenshot of a plotly visualization you’ve created while completing Part 1, Step 2: Data Cleaning and Exploratory Data Analysis. (6 points) 
-What is the pair of hypotheses you plan on testing in Part 1, Step 4? What is the test statistic you plan on using? (6 points) 
-What is the column you plan on trying to predict in Part 1, Steps 5-8? Is it a classification or regression problem? (6 points) 
