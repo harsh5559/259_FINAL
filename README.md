@@ -68,12 +68,23 @@ The distribution of professional game lengths is roughly normal with a right ske
   frameborder="0"
 ></iframe>
 
+The gold differential at 15 minutes (`golddiffat15`) follows a roughly symmetric, bell-shaped distribution centered at zero, with most values falling between −3,000 and +3,000 gold. The symmetry is expected — every positive gold lead for one team is a matching deficit for the opponent. The tails extend to ±8,000+, representing rare blowout early games.
+
 ### Bivariate Analysis
 
 The box plot below shows that teams with a positive gold differential at 15 minutes are far more likely to win. The median gold differential for winning teams is roughly +1,500 gold, while losing teams sit at approximately −1,500 gold. However, there is significant overlap — many teams with early deficits still win, motivating our investigation into whether specific objectives matter beyond raw gold.
 
 <iframe
   src="assets/golddiff_by_outcome.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+Win rate also varies by early objective control. The chart below shows that teams securing more early objectives (first blood, first dragon, first tower) win at dramatically higher rates — from 24.1% with zero objectives to 79.9% with all three. This compounding effect suggests that early objectives have a reinforcing strategic impact.
+
+<iframe
+  src="assets/objective_stacking.html"
   width="800"
   height="600"
   frameborder="0"
@@ -132,7 +143,7 @@ Blue and Red sides have identical missing rates for `golddiffat15` (15.25% each)
 
 We test whether first dragon provides a genuine strategic advantage, independent of overall gold state, using a permutation test.
 
-**Null Hypothesis (H₀):** In close games (|gold differential at 15 min| ≤ 1,000), teams that secured first dragon win at the same rate as teams that did not. Any observed difference is due to random chance.
+**Null Hypothesis (H₀):** In close games (absolute gold differential at 15 min ≤ 1,000), teams that secured first dragon win at the same rate as teams that did not. Any observed difference is due to random chance.
 
 **Alternative Hypothesis (H₁):** In close games, teams that secured first dragon win at a significantly higher rate, indicating that first dragon provides a genuine strategic advantage independent of gold state.
 
