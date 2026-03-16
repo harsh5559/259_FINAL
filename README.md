@@ -182,8 +182,8 @@ Our baseline model is a **Logistic Regression** classifier implemented in a sing
 
 **Features (7 total):**
 - **Quantitative (3):** `golddiffat15`, `xpdiffat15`, `csdiffat15` — continuous numeric values representing early-game resource differentials.
-- **Nominal (1):** `side` — categorical (Blue/Red), one-hot encoded with `drop='if_binary'`.
-- **Binary (3):** `firstblood`, `firstdragon`, `firsttower` — binary flags (0/1) indicating whether the team secured each objective.
+- **Nominal (4):** `side` (Blue/Red, one-hot encoded), `firstblood`, `firstdragon`, `firsttower` — categorical features. `side` is encoded via `OneHotEncoder(drop='if_binary')`; the three binary flags are already 0/1.
+- **Ordinal (0):** None of our features have a natural ordering with more than two levels.
 
 **Preprocessing:** Median imputation for numeric columns, most-frequent imputation for binary flags, one-hot encoding for `side`.
 
