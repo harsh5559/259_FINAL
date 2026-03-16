@@ -3,3 +3,6 @@ __pycache__/
 *.csv
 checkpoint*.pdf
 AGENT_HANDOFF.md
+.ipynb_checkpoints/
+template.html
+notebook.pdf
